@@ -1,6 +1,10 @@
 language: java
 jdk:
   - openjdk12
+addons:
+  apt:
+    packages:
+      - maven=3.5.4
 script:
   - mvn clean install -Pdistribution,tomcat7 -DskipTests=true
 branches:
